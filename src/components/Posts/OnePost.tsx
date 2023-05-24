@@ -12,6 +12,7 @@ type Props = {
 
 const OnePost = ({title, body, userId}: Props) => {
 	const navigate = useNavigate()
+
 	return (
 		<div className={styles.postContainer}>
 			<img src={emptyAvatar} alt="user's photo" className={styles.userPhoto} onClick={() => navigate(`/user-profile/${userId}`)}/>

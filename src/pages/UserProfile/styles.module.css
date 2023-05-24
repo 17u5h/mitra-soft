@@ -1,0 +1,30 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.aboutUser {
+    display: flex;
+    gap: 60px;
+}
+
+.userPhoto{
+    height: 160px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileName {
+    font-size: 20px;
+    font-weight: 500;
+}
+
