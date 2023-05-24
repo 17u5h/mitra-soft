@@ -1,5 +1,43 @@
+.wrapper {
+    margin-top: 10px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.postContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid #01A09A;
+    box-shadow: 0 0 2px #01A09A;
+    padding: 0 10px;
+    transition: transform 0.1s;
+}
+
+.postContainer:hover {
+    transform: scale(1.01);
+}
+
+.postContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.userPhoto {
+    height: 60px;
+    cursor: pointer;
+}
+
+.postTitle {
+    font-size: 20px;
+    font-weight: 500;
 }

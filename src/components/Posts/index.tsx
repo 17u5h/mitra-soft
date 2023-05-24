@@ -4,6 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchPosts} from "../../store/reducers/postsReducer";
 import styles from './styles.module.css'
 import {RootState} from "../../store";
+import {Post} from "../../types/Post";
+import OnePost from './OnePost';
 
 
 const Posts = () => {
@@ -13,7 +15,6 @@ const Posts = () => {
 
 	useEffect(() => {
 		dispatch(fetchPosts())
-		console.log(isLoading)
 	}, [])
 
 	return (
@@ -21,7 +22,7 @@ const Posts = () => {
 			{isLoading ?
 				<Spinner animation='border' variant='secondary'/> :
 				<div className={styles.container}>
-					{}
+					{posts.map((post: Post) => <OnePost key={post.id} title={post.title} body={post.body} userId={post.userId}/>)}
 				</div>
 			}
 		</div>
