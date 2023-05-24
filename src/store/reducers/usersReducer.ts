@@ -15,6 +15,9 @@ export const usersReducer = (state = initialState, action: AnyAction) => {
 		case SET_USERS: {
 			return {...state, users: action.payload}
 		}
+		case LOADING_SWITCH: {
+			return {...state, isLoading: action.payload}
+		}
 		default:
 			return state
 	}

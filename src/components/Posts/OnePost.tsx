@@ -18,7 +18,7 @@ const OnePost = ({title, body, userId}: Props) => {
 			<div className={styles.postContent}>
 				<p className={styles.postTitle}>{title}</p>
 				<p className={styles.postBody}>{body}</p>
-				<Comments userId={userId} />
+				<Comments userId={userId}/>
 			</div>
 		</div>
 	);
