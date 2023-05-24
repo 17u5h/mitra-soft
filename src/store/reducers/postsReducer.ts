@@ -2,7 +2,7 @@ import {Post} from "../../types/Post";
 
 type Action = {
 	type: string
-	payload: Post[]
+	payload?: Post[]
 }
 
 const initialState: Post[] = []

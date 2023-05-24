@@ -1,6 +1,7 @@
 .email {
     color: #000;
 }
+
 .email:hover {
     text-decoration: underline;
     color: #000;

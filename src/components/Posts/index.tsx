@@ -1,10 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {Spinner} from "react-bootstrap";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchPosts} from "../../store/reducers/postsReducer";
+import styles from './styles.module.css'
+import {RootState} from "../../store";
+
 
 const Posts = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(false)
+	const posts = useSelector((state: RootState) => state.postsReducer)
 	const dispatch = useDispatch()
 
 	const fetchAllPosts = async () => {
@@ -20,12 +24,17 @@ const Posts = () => {
 
 
 	useEffect(() => {
-		fetchAllPosts()
+		dispatch(fetchPosts())
 	}, [])
 
 	return (
-		<div>
-			{isLoading? <Spinner animation='border' variant='secondary'/> : }
+		<div style={{width: '400px', height: '200px', backgroundColor: '#999'}} onClick={() => console.log(posts)}>
+			{isLoading ?
+				<Spinner animation='border' variant='secondary'/> :
+				<div className={styles.container}>
+					{}
+				</div>
+			}
 		</div>
 	);
 };
