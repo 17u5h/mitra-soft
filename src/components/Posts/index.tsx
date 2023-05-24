@@ -7,28 +7,17 @@ import {RootState} from "../../store";
 
 
 const Posts = () => {
-	const [isLoading, setIsLoading] = useState<boolean>(false)
-	const posts = useSelector((state: RootState) => state.postsReducer)
+	const posts = useSelector((state: RootState) => state.postsReducer.posts)
+	const isLoading = useSelector((state: RootState) => state.postsReducer.isLoading)
 	const dispatch = useDispatch()
-
-	const fetchAllPosts = async () => {
-		setIsLoading(true)
-		try {
-			dispatch(fetchPosts())
-		} catch (e) {
-			console.error('не удалось получить посты с сервера')
-		} finally {
-			setIsLoading(false)
-		}
-	}
-
 
 	useEffect(() => {
 		dispatch(fetchPosts())
+		console.log(isLoading)
 	}, [])
 
 	return (
-		<div style={{width: '400px', height: '200px', backgroundColor: '#999'}} onClick={() => console.log(posts)}>
+		<div className={styles.wrapper} onClick={() => console.log(posts)}>
 			{isLoading ?
 				<Spinner animation='border' variant='secondary'/> :
 				<div className={styles.container}>
