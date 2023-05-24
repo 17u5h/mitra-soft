@@ -18,7 +18,7 @@ const Posts = () => {
 	}, [])
 
 	return (
-		<div className={styles.wrapper} onClick={() => console.log(posts)}>
+		<div className={styles.wrapper} onClick={() => console.log()}>
 			{isLoading ?
 				<Spinner animation='border' variant='secondary'/> :
 				<div className={styles.container}>

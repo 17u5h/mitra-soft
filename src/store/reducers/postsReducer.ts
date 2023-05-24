@@ -1,8 +1,7 @@
-import {InitialState, Post} from "../../types/Post";
+import {Post} from "../../types/Post";
 import {AnyAction} from "@reduxjs/toolkit";
 
-
-const initialState= {
+const initialState = {
 	posts: [],
 	isLoading: false
 }
@@ -24,6 +23,6 @@ export const postsReducer = (state = initialState, action: AnyAction) => {
 	}
 }
 
+export const fetchPosts = () => ({type: FETCH_POSTS})
 export const setPosts = (payload: Post[]) => ({type: SET_POSTS, payload})
 export const isPostsLoading = (payload: boolean) => ({type: LOADING_SWITCH, payload})
-export const fetchPosts = () => ({type: FETCH_POSTS})

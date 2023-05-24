@@ -10,7 +10,7 @@ const AppRoutes = () => {
 		<Routes>
 			<Route path="/" element={<Main/>}/>
 			<Route path="/my-profile" element={<MyProfile/>}/>
-			<Route path="/user-profile/:id" element={<UserProfile/>}/>
+			<Route path="/user-profile/:userId" element={<UserProfile/>}/>
 
 			<Route path="*" element={<NotFound/>}/>
 		</Routes>
