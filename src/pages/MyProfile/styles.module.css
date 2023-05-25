@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 1400px;
+  height: 100vh;
+  margin: auto;
+}
+
+.photo {
+  width: 300px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.body,
+.contacts {
+  width: 800px;
+  color: #000;
+  font-size: 18px;
+  text-align: justify;
+}
