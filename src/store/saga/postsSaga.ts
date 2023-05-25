@@ -4,7 +4,7 @@ import { Post, PostsPromise } from '../../types/Post'
 import { API_URL } from '../../constants/URLs'
 import { delay } from '../../lib/delay'
 
-const fetchPostsFromAPI = () => fetch(`${API_URL}/posts`)
+const fetchPostsFromAPI = () => fetch(`${API_URL}/posts`).catch(e => console.error(`не получены посты с API: ${e}`))
 
 function* fetchPostsWorker() {
   yield put(isPostsLoading(true))

@@ -4,7 +4,7 @@ import { delay } from '../../lib/delay'
 import { FETCH_USERS, isUsersLoading, setUsers } from '../reducers/usersReducer'
 import { User, UsersPromise } from '../../types/User'
 
-const fetchUsersFromAPI = () => fetch(`${API_URL}/users`)
+const fetchUsersFromAPI = () => fetch(`${API_URL}/users`).catch(e => console.error(`не получены посты с API: ${e}`))
 
 function* fetchUsersWorker() {
   yield put(isUsersLoading(true))
