@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import styles from './styles.module.css'
 
 const NotFound = () => {
-	return (
-		<div>
+  return (
+    <div className={styles.notFound}>
+      <div className={styles.img} />
+      <div className={styles.text}>Страница не найдена. Вы попали в Мордор</div>
+    </div>
+  )
+}
 
-		</div>
-	);
-};
-
-export default NotFound;
+export default NotFound

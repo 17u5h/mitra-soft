@@ -1,21 +1,21 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .commentContainer {
-    border: 1px solid #999;
-    box-shadow: 0 0 2px #999;
-    padding: 0 10px;
-    transition: transform 0.1s;
+  border: 1px solid #999;
+  box-shadow: 0 0 2px #999;
+  padding: 0 10px;
+  transition: transform 0.1s;
 }
 
 .commentContainer:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .commentTitle {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }

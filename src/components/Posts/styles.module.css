@@ -1,56 +1,56 @@
 .wrapper {
-    margin: 10px 0;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin: 10px 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .postWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #01A09A;
-    box-shadow: 0 0 2px #01A09A;
-    padding: 0 10px;
-    transition: transform 0.1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #01a09a;
+  box-shadow: 0 0 2px #01a09a;
+  padding: 0 10px;
+  transition: transform 0.1s;
 }
 
 .postWrapper:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .postContainer {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 40px;
 }
 
 .postContent {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .userPhoto {
-    height: 60px;
-    cursor: pointer;
+  height: 60px;
+  cursor: pointer;
 }
 
 .postTitle {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .commentsContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }

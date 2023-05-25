@@ -1,13 +1,13 @@
 .button {
-    height: 60px;
-    padding: 0 40px;
-    border: none;
-    color: #fff;
-    background-color: #01A09A;
-    font-size: 18px;
-    transition: background-color 0.2s;
+  height: 60px;
+  padding: 0 40px;
+  border: none;
+  color: #fff;
+  background-color: #01a09a;
+  font-size: 18px;
+  transition: background-color 0.2s;
 }
 
 .button:hover {
-    background-color: #F03F37;
+  background-color: #f03f37;
 }
