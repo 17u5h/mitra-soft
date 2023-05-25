@@ -16,7 +16,7 @@ const Posts = ({posts, isLoading}: Props) => {
 			{isLoading ?
 				<Spinner animation='border' variant='secondary'/> :
 				<div className={styles.container}>
-					{posts?.map((post: Post) => <OnePost key={post.id} title={post.title} body={post.body} userId={post.userId}/>)}
+					{posts?.map((post: Post) => <OnePost key={post.id} title={post.title} body={post.body} userId={post.userId} postId={post.id}/>)}
 				</div>
 			}
 		</div>

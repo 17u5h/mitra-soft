@@ -1,13 +1,17 @@
 import React from 'react';
+import {Comment} from "../../types/Comment";
+import styles from './styles.module.css'
+import OneComment from "./OneComment";
+
 
 type Props = {
-	userId: number
+	comments: Comment[]
 }
 
-const Comments = ({userId}: Props) => {
+const Comments = ({comments}: Props) => {
 	return (
-		<div>
-
+		<div className={styles.container}>
+			{comments.map(el => (<OneComment key={el.id} comment={el}/>))}
 		</div>
 	);
 };

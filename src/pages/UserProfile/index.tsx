@@ -33,8 +33,7 @@ const UserProfile = () => {
 			setUserPosts(usersPosts)
 		}, [users])
 
-
-		const goBackward = () => {
+		const goMainPage = () => {
 			navigate('/')
 		}
 
@@ -44,17 +43,16 @@ const UserProfile = () => {
 					<Spinner animation='border' variant='secondary'/> :
 					<>
 						<div className={styles.aboutUser}>
-							<img src={emptyAvatar} alt="user's photo" className={styles.userPhoto}
-									 onClick={() => navigate(`/user-profile/${userId}`)}/>
+							<img src={emptyAvatar} alt="user's photo" className={styles.userPhoto}/>
 							<div className={styles.userInfo}>
 								<p className={styles.profileName}>{foundUser?.name}</p>
 								<p>{foundUser?.email}</p>
 								<p>{foundUser?.website}</p>
 							</div>
-							<UIButton onClick={goBackward}>Назад</UIButton>
+							<UIButton onClick={goMainPage}>Назад</UIButton>
 						</div>
 						<Posts posts={userPosts} isLoading={isLoading}/>
-						<UIButton onClick={goBackward}>Назад</UIButton>
+						<UIButton onClick={goMainPage}>Назад</UIButton>
 					</>
 				}
 			</div>
