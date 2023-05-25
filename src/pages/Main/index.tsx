@@ -4,6 +4,7 @@ import Posts from "../../components/Posts";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store";
 import {fetchPosts, setSortedPosts} from "../../store/reducers/postsReducer";
+import Search from "../../components/Search";
 
 const Main = () => {
 	const posts = useSelector((state: RootState) => state.postsReducer.posts)

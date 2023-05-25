@@ -1,0 +1,27 @@
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.customInput {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #01A09A;
+    border-radius: 6px;
+    padding-left: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.customInput:hover, .customInput:focus {
+    box-shadow: 0 0 0 2px #047e79;
+}
+
+.closeButtonContainer {
+    position: absolute;
+    right: 100px;
+    top: 6px;
+    cursor: pointer;
+}

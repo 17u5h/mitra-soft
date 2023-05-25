@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store";
 import {Post} from "../../types/Post";
 import {setSortedPosts} from "../../store/reducers/postsReducer";
+import Search from "../Search";
 
 const Header = () => {
 	const dispatch = useDispatch()
@@ -43,9 +44,10 @@ const Header = () => {
 					</Nav>
 				</Offcanvas.Body>
 			</Navbar.Offcanvas>
+			<Search/>
 			<NavDropdown title='Сортировка' style={{color: '#bbb'}}>
 				<NavDropdown.Item onClick={sortPostsAlphabetic}>По алфавиту</NavDropdown.Item>
-				<NavDropdown.Divider />
+				<NavDropdown.Divider/>
 				<NavDropdown.Item onClick={cancelSorting}>Сброс</NavDropdown.Item>
 			</NavDropdown>
 		</Navbar>
