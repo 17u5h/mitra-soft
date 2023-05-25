@@ -31,6 +31,7 @@ const Search = () => {
 
   const cancelHandler = () => {
     setSearchQuery('')
+    dispatch(setSortedPosts(posts))
   }
 
   return (

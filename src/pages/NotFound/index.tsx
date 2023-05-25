@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './styles.module.css'
+import picture from '../../assets/404.jpg'
 
 const NotFound = () => {
   return (
     <div className={styles.notFound}>
-      <div className={styles.img} />
+      <img src={picture} className={styles.img} alt='picture of Mordor'/>
       <div className={styles.text}>Страница не найдена. Вы попали в Мордор</div>
     </div>
   )
