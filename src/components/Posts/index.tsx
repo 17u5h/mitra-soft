@@ -11,6 +11,7 @@ type Props = {
 }
 
 const Posts = ({posts, isLoading}: Props) => {
+
 	const countPostsOnPage = 10
 	const amountOfPages = Math.ceil((posts?.length || 1) / countPostsOnPage)
 
