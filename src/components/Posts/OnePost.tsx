@@ -46,11 +46,13 @@ const OnePost = ({title, body, userId, postId}: Props) => {
 
 	return (
 		<>
-			<div className={styles.postContainer}>
-				<img src={emptyAvatar} alt="user's photo" className={styles.userPhoto} onClick={goUserProfilePage}/>
-				<div className={styles.postContent}>
-					<p className={styles.postTitle}>{title}</p>
-					<p className={styles.postBody}>{body}</p>
+			<div className={styles.postWrapper}>
+				<div className={styles.postContainer}>
+					<img src={emptyAvatar} alt="user's photo" className={styles.userPhoto} onClick={goUserProfilePage}/>
+					<div className={styles.postContent}>
+						<p className={styles.postTitle}>{title}</p>
+						<p className={styles.postBody}>{body}</p>
+					</div>
 				</div>
 				<UIButton onClick={showComments}>{isCommentsVisible ? 'Скрыть' : 'Комментарии'}</UIButton>
 			</div>

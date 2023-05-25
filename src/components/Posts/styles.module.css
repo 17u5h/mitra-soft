@@ -1,7 +1,8 @@
 .wrapper {
-    margin-top: 10px;
+    margin: 10px 0;
     padding: 0 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -12,18 +13,25 @@
     gap: 10px;
 }
 
-.postContainer {
+.postWrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
     border: 1px solid #01A09A;
     box-shadow: 0 0 2px #01A09A;
     padding: 0 10px;
     transition: transform 0.1s;
 }
 
-.postContainer:hover {
+.postWrapper:hover {
     transform: scale(1.01);
+}
+
+.postContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
 }
 
 .postContent {
