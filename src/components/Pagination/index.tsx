@@ -24,7 +24,7 @@ const PaginationComponent = ({ amountOfPages, onChangePage }: Props) => {
 
   return (
     <div>
-      <Pagination size="lg">{paginationItems}</Pagination>
+      <Pagination >{paginationItems}</Pagination>
     </div>
   )
 }

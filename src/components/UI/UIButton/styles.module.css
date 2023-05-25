@@ -11,3 +11,11 @@
 .button:hover {
   background-color: #f03f37;
 }
+
+@media (max-width: 700px) {
+  .button {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}

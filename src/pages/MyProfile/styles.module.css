@@ -3,8 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  width: 1400px;
-  height: 100vh;
+  padding-top: 20px;
   margin: auto;
 }
 
@@ -26,8 +25,17 @@
 
 .body,
 .contacts {
-  width: 800px;
+  width: 500px;
   color: #000;
   font-size: 18px;
   text-align: justify;
+}
+
+@media (max-width: 700px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  .body, .contacts {
+    width: 400px;
+  }
 }

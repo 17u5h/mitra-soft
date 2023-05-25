@@ -9,6 +9,7 @@ const MyProfile = () => {
 		<>
 			<Header/>
 			<div className={styles.wrapper}>
+
 				<img src={avatar} alt="owner's photo" className={styles.photo}/>
 				<div className={styles.container}>
 					<p className={styles.title}>{aboutOwnerTitle}</p>

@@ -6,7 +6,7 @@
 }
 
 .customInput {
-  width: 300px;
+  max-width: 300px;
   height: 40px;
   border: 1px solid #01a09a;
   border-radius: 6px;
