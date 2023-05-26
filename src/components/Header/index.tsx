@@ -8,8 +8,10 @@ import { RootState } from '../../store'
 import { Post } from '../../types/Post'
 import { setSortedPosts } from '../../store/reducers/postsReducer'
 import Search from '../Search'
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const posts = useSelector((state: RootState) => state.postsReducer.posts)
 
@@ -20,6 +22,9 @@ const Header = () => {
   }
   const cancelSorting = () => {
     dispatch(setSortedPosts(posts))
+  }
+  const goToMyProfilePage = () => {
+    navigate('/my-profile')
   }
 
   return (
@@ -42,7 +47,7 @@ const Header = () => {
           <img src={avatar} alt="owner's photo" className="w-50" />
           <Nav className="mt-2 fs-3">
             <Nav.Link href="/">Список постов</Nav.Link>
-            <Nav.Link href="/my-profile">Обо мне</Nav.Link>
+            <Nav.Link onClick={goToMyProfilePage}>Обо мне</Nav.Link>
           </Nav>
         </Offcanvas.Body>
       </Navbar.Offcanvas>
